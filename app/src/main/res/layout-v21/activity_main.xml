@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    >
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/Toolbar_top"
@@ -56,11 +57,12 @@
             android:layout_weight="1"
             ></TextView>
     </LinearLayout>
-    <RelativeLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Recycler"
+        android:layout_above="@+id/RadioGroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/Line"
-        ></RelativeLayout>
+        android:layout_below="@+id/Line"></androidx.recyclerview.widget.RecyclerView>
     <RadioGroup
         android:id="@+id/RadioGroup"
         android:layout_width="match_parent"
