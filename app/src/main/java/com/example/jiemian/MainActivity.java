@@ -20,15 +20,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        //赋值
         context = this;
         list = new ArrayList<>();
         for (int i = 1; i<=20 ; i++){
             list.add(i);
         }
         recyclerView = findViewById(R.id.Recycler);
+        //设置线性布局
         LinearLayoutManager linearLayout = new LinearLayoutManager(context);
         recyclerView.setLayoutManager(linearLayout);
+        //设置适配器
         RecyclerApaterDemo recyclerApaterDemo = new RecyclerApaterDemo(context,list);
         recyclerView.setAdapter(recyclerApaterDemo);
     }
