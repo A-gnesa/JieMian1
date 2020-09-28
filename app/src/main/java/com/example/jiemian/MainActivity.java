@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.jiemian.Fragment.fragment_Message;
+import com.example.jiemian.Fragment.fragment_RadioGroup;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,7 +52,10 @@ public class MainActivity extends AppCompatActivity {
     }
     void init_first_fragment(){
         fragmentTransaction = fragmentManager.beginTransaction();
-        fragment_Message message_fragment = new fragment_Message();
+        fragment_RadioGroup fragmentRadioGroup = new fragment_RadioGroup();
+        fragmentTransaction.add(R.id.fragment_radiogroup,fragmentRadioGroup);
+        fragmentTransaction.commit();
+
 
     }
     void init_RadioGroup(){
