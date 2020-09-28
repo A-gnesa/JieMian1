@@ -4,8 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".MainActivity"
-    >
+    tools:context=".MainActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/Toolbar_top"
@@ -13,7 +12,6 @@
         android:layout_height="wrap_content"
         android:background="#808080"
         app:logo="@mipmap/ic_logo">
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -21,81 +19,58 @@
             android:text="标题"
             android:textSize="32dp"></TextView>
     </androidx.appcompat.widget.Toolbar>
-    <LinearLayout
-        android:id="@+id/Line"
+    <RelativeLayout
+        android:id="@+id/RelativeLayout"
+        android:layout_below="@id/Toolbar_top"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/Toolbar_top">
-        <TextView
-            android:id="@+id/first_fun"
-            android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/Line"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="一号功能"
-            android:layout_weight="1"
-            ></TextView>
-        <TextView
-            android:id="@+id/sencond_fun"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="二号功能"
-            android:layout_toRightOf="@+id/first_fun"
-            android:layout_weight="1"
-            ></TextView>
-        <TextView
-            android:id="@+id/thrid_fun"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="三号功能"
-            android:layout_weight="1"
-            ></TextView>
-        <TextView
-            android:id="@+id/fourth_fun"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="四号功能"
-            android:layout_toRightOf="@+id/first_fun"
-            android:layout_weight="1"
-            ></TextView>
-    </LinearLayout>
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/Recycler"
-        android:layout_above="@+id/RadioGroup"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/Line"></androidx.recyclerview.widget.RecyclerView>
-    <RadioGroup
-        android:id="@+id/RadioGroup"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:orientation="horizontal">
-        <RadioButton
-            android:id="@+id/home_page"
-            android:text="首页"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:button="@null"
-            android:gravity="center_horizontal|bottom"
-            ></RadioButton>
-        <RadioButton
-            android:id="@+id/message"
-            android:text="消息"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:button="@null"
-            android:gravity="center_horizontal|bottom"
-            android:layout_weight="1"
-            ></RadioButton>
-        <RadioButton
-            android:id="@+id/Mine"
-            android:text="我的"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:button="@null"
-            android:gravity="center_horizontal|bottom"
-            ></RadioButton>
+            >
+            <TextView
+                android:id="@+id/first_fun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="一号功能"
+                android:layout_weight="1"
+                ></TextView>
+            <TextView
+                android:id="@+id/sencond_fun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="二号功能"
+                android:layout_toRightOf="@+id/first_fun"
+                android:layout_weight="1"
+                ></TextView>
+            <TextView
+                android:id="@+id/thrid_fun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="三号功能"
+                android:layout_weight="1"
+                ></TextView>
+            <TextView
+                android:id="@+id/fourth_fun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="四号功能"
+                android:layout_toRightOf="@+id/first_fun"
+                android:layout_weight="1"
+                ></TextView>
+        </LinearLayout>
 
-    </RadioGroup>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/Recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Line"></androidx.recyclerview.widget.RecyclerView>
+        <LinearLayout
+            android:id="@+id/fragment_radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"></LinearLayout>
+    </RelativeLayout>
 </RelativeLayout>
