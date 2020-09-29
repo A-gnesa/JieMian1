@@ -5,9 +5,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
@@ -15,7 +13,6 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.jiemian.Fragment.fragment_Message;
 import com.example.jiemian.Fragment.fragment_RadioGroup;
 
 import java.util.ArrayList;
@@ -34,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
     View message;
+
     @SuppressLint("WrongConstant")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,22 +41,22 @@ public class MainActivity extends AppCompatActivity {
         //用LayoutInflater加载布局
         LayoutInflater fragment_message = LayoutInflater.from(context);
         //获取message所在的View
-        message = fragment_message.inflate(R.layout.fragment_radiobutton,null);
+        message = fragment_message.inflate(R.layout.fragment_radiobutton, null);
         //找到radioGroup
-        radioGroup = message.findViewById(R.id.RadioGroup);
+        radioGroup = message.findViewById(R.id.fra_RadioGroup);
         //初始化fragmentManager
         fragmentManager = getSupportFragmentManager();
         //初始化Recycler
         init_Recycler();
         init_first_fragment();
         //初始化RadioGroup 实现切换Fragment
-
-        init_RadioGroup();
+//        init_RadioGroup();
     }
-    void init_Recycler(){
+
+    void init_Recycler() {
         //赋值
         list = new ArrayList<>();
-        for (int i = 1; i<=20 ; i++){
+        for (int i = 1; i <= 20; i++) {
             list.add(i);
         }
         recyclerView = findViewById(R.id.Recycler);
@@ -66,28 +64,14 @@ public class MainActivity extends AppCompatActivity {
         LinearLayoutManager linearLayout = new LinearLayoutManager(context);
         recyclerView.setLayoutManager(linearLayout);
         //设置适配器
-        RecyclerApaterDemo recyclerApaterDemo = new RecyclerApaterDemo(context,list);
+        RecyclerApaterDemo recyclerApaterDemo = new RecyclerApaterDemo(context, list);
         recyclerView.setAdapter(recyclerApaterDemo);
     }
-    void init_first_fragment(){
+
+    void init_first_fragment() {
         fragmentTransaction = fragmentManager.beginTransaction();
         fragment_RadioGroup fragmentRadioGroup = new fragment_RadioGroup();
-        fragmentTransaction.add(R.id.fragment_radiogroup,fragmentRadioGroup);
+        fragmentTransaction.add(R.id.fragment_radiogroup, fragmentRadioGroup);
         fragmentTransaction.commit();
-
-
-    }
-    void init_RadioGroup(){
-        RadioButton button_message = message.findViewById(R.id.message);
-        button_message.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(context,"A",Toast.LENGTH_LONG);
-                fragmentTransaction = fragmentManager.beginTransaction();
-                fragment_Message message_fragment = new fragment_Message();
-                fragmentTransaction.add(R.id.RelativeLayout,message_fragment);
-                fragmentTransaction.commit();
-            }
-        });
     }
 }

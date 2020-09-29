@@ -65,11 +65,12 @@
             android:id="@+id/Recycler"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/Line"></androidx.recyclerview.widget.RecyclerView>
+            android:layout_below="@+id/Line"
+            android:layout_above="@+id/fra_RadioGroup"></androidx.recyclerview.widget.RecyclerView>
         <LinearLayout
             android:id="@+id/fragment_radiogroup"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_alignParentBottom="true"
             android:orientation="horizontal"></LinearLayout>
     </RelativeLayout>

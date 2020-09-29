@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment;
 import com.example.jiemian.R;
 
 public class fragment_Message extends Fragment {
+    View view;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,7 +21,8 @@ public class fragment_Message extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.message_xml,container,false);
+        view = inflater.inflate(R.layout.message_xml,container,false);
         return view;
     }
+
 }

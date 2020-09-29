@@ -12,7 +12,6 @@
         android:layout_height="wrap_content"
         android:background="#808080"
         app:logo="@mipmap/ic_logo">
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -20,52 +19,59 @@
             android:text="标题"
             android:textSize="32dp"></TextView>
     </androidx.appcompat.widget.Toolbar>
-    <LinearLayout
-        android:id="@+id/Line"
+    <RelativeLayout
+        android:id="@+id/RelativeLayout"
+        android:layout_below="@id/Toolbar_top"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/Toolbar_top">
-        <TextView
-            android:id="@+id/first_fun"
-            android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/Line"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="一号功能"
-            android:layout_weight="1"
-            ></TextView>
-        <TextView
-            android:id="@+id/sencond_fun"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="二号功能"
-            android:layout_toRightOf="@+id/first_fun"
-            android:layout_weight="1"
-            ></TextView>
-        <TextView
-            android:id="@+id/thrid_fun"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="三号功能"
-            android:layout_weight="1"
-            ></TextView>
-        <TextView
-            android:id="@+id/fourth_fun"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="四号功能"
-            android:layout_toRightOf="@+id/first_fun"
-            android:layout_weight="1"
-            ></TextView>
-    </LinearLayout>
+            >
+            <TextView
+                android:id="@+id/first_fun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="一号功能"
+                android:layout_weight="1"
+                ></TextView>
+            <TextView
+                android:id="@+id/sencond_fun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="二号功能"
+                android:layout_toRightOf="@+id/first_fun"
+                android:layout_weight="1"
+                ></TextView>
+            <TextView
+                android:id="@+id/thrid_fun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="三号功能"
+                android:layout_weight="1"
+                ></TextView>
+            <TextView
+                android:id="@+id/fourth_fun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="四号功能"
+                android:layout_toRightOf="@+id/first_fun"
+                android:layout_weight="1"
+                ></TextView>
+        </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/Recycler"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/Line"></androidx.recyclerview.widget.RecyclerView>
-    <LinearLayout
-        android:id="@+id/fragment_radiogroup"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:orientation="horizontal"></LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/Recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Line"
+            android:layout_above="@+id/fra_RadioGroup"></androidx.recyclerview.widget.RecyclerView>
+        <LinearLayout
+            android:id="@+id/fragment_radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"></LinearLayout>
+    </RelativeLayout>
 </RelativeLayout>
