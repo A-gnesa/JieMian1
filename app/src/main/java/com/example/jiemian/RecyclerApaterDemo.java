@@ -18,7 +18,7 @@ public class RecyclerApaterDemo extends RecyclerView.Adapter<RecyclerApaterDemo.
 
 
     //构造方法
-    RecyclerApaterDemo(Context context,List<Integer> list){
+    public RecyclerApaterDemo(Context context, List<Integer> list){
         this.context = context;
         this.list = list;
     }
