@@ -36,7 +36,7 @@ public class fragment_Recycler extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.activity_main,container,false);
-        recyclerView = view.findViewById(R.id.fragment_Recycler);
+        recyclerView = view.findViewById(R.id.Recycler);
         //设置线性布局
         LinearLayoutManager linearLayout = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(linearLayout);
