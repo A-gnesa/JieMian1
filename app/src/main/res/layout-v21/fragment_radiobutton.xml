@@ -1,16 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/Toolbar_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#808080"
+        app:logo="@mipmap/ic_logo">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="标题"
+            android:textSize="32dp"></TextView>
+    </androidx.appcompat.widget.Toolbar>
     <RelativeLayout
-        android:id="@+id/fragment_Recycler"
+        android:id="@+id/switch_fragment"
+        android:layout_below="@+id/Toolbar_top"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"></RelativeLayout>
     <RadioGroup
         android:id="@+id/fra_RadioGroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:layout_alignParentBottom="true"
+        android:button="@null"
         android:orientation="horizontal">
         <RadioButton
             android:id="@+id/home_page"
@@ -24,9 +40,9 @@
         <RadioButton
             android:id="@+id/home_message"
             android:text="消息"
+            android:button="@null"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:button="@null"
             android:gravity="center_horizontal|bottom"
             android:layout_weight="1"
             ></RadioButton>

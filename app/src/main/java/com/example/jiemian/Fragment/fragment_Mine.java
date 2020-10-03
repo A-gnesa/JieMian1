@@ -1,5 +1,6 @@
 package com.example.jiemian.Fragment;
 
+
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,18 +12,16 @@ import androidx.fragment.app.Fragment;
 
 import com.example.jiemian.R;
 
-public class fragment_Message extends Fragment {
-    View view;
+public class fragment_Mine extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
 
     @Nullable
-    @Override
+    View view ;
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_message,container,false);
+        view = inflater.inflate(R.layout.fragment_mine,container,false);
         return view;
     }
-
 }

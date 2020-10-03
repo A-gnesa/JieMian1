@@ -1,8 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/Toolbar_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#808080"
+        app:logo="@mipmap/ic_logo">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="标题"
+            android:textSize="32dp"></TextView>
+    </androidx.appcompat.widget.Toolbar>
     <RelativeLayout
-        android:id="@+id/fragment_Recycler"
+        android:id="@+id/switch_fragment"
+        android:layout_below="@+id/Toolbar_top"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"></RelativeLayout>
     <RadioGroup
