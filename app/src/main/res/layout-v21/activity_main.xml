@@ -4,16 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
-    <LinearLayout
-        android:id="@+id/Toolbar_top"
-        android:layout_alignParentTop="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"></LinearLayout>
     <RelativeLayout
         android:id="@+id/RelativeLayout"
-        android:layout_below="@id/Toolbar_top"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <LinearLayout
@@ -21,36 +13,36 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             >
-            <TextView
+            <Button
                 android:id="@+id/first_fun"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="一号功能"
                 android:layout_weight="1"
-                ></TextView>
-            <TextView
+                ></Button>
+            <Button
                 android:id="@+id/sencond_fun"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="二号功能"
                 android:layout_toRightOf="@+id/first_fun"
                 android:layout_weight="1"
-                ></TextView>
-            <TextView
+                ></Button>
+            <Button
                 android:id="@+id/thrid_fun"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="三号功能"
                 android:layout_weight="1"
-                ></TextView>
-            <TextView
+                ></Button>
+            <Button
                 android:id="@+id/fourth_fun"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="四号功能"
                 android:layout_toRightOf="@+id/first_fun"
                 android:layout_weight="1"
-                ></TextView>
+                ></Button>
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView

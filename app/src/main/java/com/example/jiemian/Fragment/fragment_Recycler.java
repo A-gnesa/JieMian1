@@ -29,7 +29,6 @@ public class fragment_Recycler extends Fragment {
         for (int i = 1; i <= 20; i++) {
             list.add(i);
         }
-
     }
 
     @Nullable
