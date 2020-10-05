@@ -10,6 +10,7 @@
         android:background="#808080"
         app:logo="@mipmap/ic_logo">
         <TextView
+            android:id="@+id/Toolbar_title"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
