@@ -10,7 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity android:name=".RecyclerApaterDemo"></activity>
+        <activity android:name=".Activity_FirstFun"></activity>
         <activity android:name=".MainActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

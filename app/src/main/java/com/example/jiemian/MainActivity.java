@@ -28,10 +28,6 @@ public class MainActivity extends AppCompatActivity {
     private RadioGroup radioGroup;
     private Toolbar toolbar;
     private TextView Toolbar_title;
-    private Button  first_fun;
-    private Button  second_fun;
-    private Button  third_fun;
-    private Button  fourth_fun;
     //声明 Fragment
     private Fragment fragment_Message;
     private Fragment fragment_Recycler;
@@ -50,20 +46,11 @@ public class MainActivity extends AppCompatActivity {
         Toolbar_title = findViewById(R.id.Toolbar_title);
         fragment_Message = new fragment_Message();
         fragment_Mine = new fragment_Mine();
-//      定位布局文件
-        LayoutInflater layoutInflater = LayoutInflater.from(this);
-        View view = layoutInflater.inflate(R.layout.activity_main,null);
-
-
-        first_fun = view.findViewById(R.id.first_fun);
-        second_fun = findViewById(R.id.sencond_fun);
-        third_fun = findViewById(R.id.thrid_fun);
-        fourth_fun = findViewById(R.id.fourth_fun);
 
 
         init_first_fragment();
         setSupportActionBar(toolbar);
-        init_button();
+
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -113,16 +100,5 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-//实现1234号功能的切换
-void init_button() {
-    first_fun.setOnClickListener(new OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Intent intent = new Intent(MainActivity.this,Activity_FirstFun.class);
-            System.out.println("123");
-            Toast.makeText(MainActivity.this,"asd",Toast.LENGTH_LONG);
-            startActivity(intent);
-            }
-        });
-    }
+
 }
